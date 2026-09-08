@@ -16,10 +16,7 @@
   border: none;
   font-weight: var(--ds-font-weight-medium);
   font-family: var(--ds-font-family);
-  
-  background: var(--ds-bg-default); 
-  color: var(--ds-fg-default); 
-  
+
   line-height: var(--ds-line-height-tight);
   cursor: pointer;
   transition: all var(--ds-transition-base);
@@ -169,7 +166,7 @@
 }
 
 // Color 스타일 (색상별)
-.purple-fill {
+.primary-fill {
   background: linear-gradient(135deg, var(--ds-primary-500), var(--ds-primary-600));
   color: var(--ds-color-white);
   
@@ -184,7 +181,7 @@
   }
 }
 
-.purple-outline {
+.primary-outline {
   background: transparent;
   color: var(--ds-primary-500);
   border: 1px solid var(--ds-primary-500);
@@ -195,7 +192,7 @@
   }
 }
 
-.purple-ghost {
+.primary-ghost {
   background: transparent;
   color: var(--ds-primary-500);
   border: none;
@@ -205,7 +202,7 @@
   }
 }
 
-.blue-fill {
+.info-fill {
   background: linear-gradient(135deg, var(--ds-blue-500), var(--ds-blue-600));
   color: var(--ds-color-white);
   
@@ -220,7 +217,7 @@
   }
 }
 
-.blue-outline {
+.info-outline {
   background: transparent;
   color: var(--ds-blue-500);
   border: 1px solid var(--ds-blue-500);
@@ -231,7 +228,7 @@
   }
 }
 
-.blue-ghost {
+.info-ghost {
   background: transparent;
   color: var(--ds-blue-500);
   border: none;
@@ -241,7 +238,7 @@
   }
 }
 
-.red-fill {
+.danger-fill {
   background: linear-gradient(135deg, var(--ds-red-500), var(--ds-red-600));
   color: var(--ds-color-white);
   
@@ -256,7 +253,7 @@
   }
 }
 
-.red-outline {
+.danger-outline {
   background: transparent;
   color: var(--ds-red-500);
   border: 1px solid var(--ds-red-500);
@@ -267,7 +264,7 @@
   }
 }
 
-.red-ghost {
+.danger-ghost {
   background: transparent;
   color: var(--ds-red-500);
   border: none;
@@ -277,7 +274,7 @@
   }
 }
 
-.black-fill {
+.neutral-fill {
   background: linear-gradient(135deg, var(--ds-black-500), var(--ds-black-600));
   color: var(--ds-color-white);
   
@@ -292,7 +289,7 @@
   }
 }
 
-.black-outline {
+.neutral-outline {
   background: transparent;
   color: var(--ds-black-500);
   border: 1.5px solid var(--ds-black-500);
@@ -309,7 +306,7 @@
   }
 }
 
-.black-ghost {
+.neutral-ghost {
   background: transparent;
   color: var(--ds-black-500);
   border: none;
@@ -325,7 +322,7 @@
   }
 }
 
-.yellow-fill {
+.warning-fill {
   background: linear-gradient(135deg, var(--ds-yellow-500), var(--ds-yellow-600));
   color: var(--ds-color-white);
   
@@ -340,7 +337,7 @@
   }
 }
 
-.yellow-outline {
+.warning-outline {
   background: transparent;
   color: var(--ds-yellow-600);
   border: 1px solid var(--ds-yellow-500);
@@ -351,7 +348,7 @@
   }
 }
 
-.yellow-ghost {
+.warning-ghost {
   background: transparent;
   color: var(--ds-yellow-600);
   border: none;

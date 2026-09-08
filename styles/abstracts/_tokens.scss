@@ -177,10 +177,6 @@
      ======================================== */
   --ds-color-white: #ffffff;
   --ds-color-black: #000000;
-  
-  /* 전역 기본 색상 */
-  --ds-bg-default: #f3f0ff; 
-  --ds-fg-default: #4f369d; 
 
   /* 기본 배경 및 전경 */
   --ds-bg: var(--ds-color-white);
@@ -256,4 +252,19 @@
   /* Opacity */
   --ds-opacity-disabled: 0.4;
   --ds-opacity-subtle: 0.7;
+}
+
+/* ========================================
+   Dark mode
+   Overrides only the neutral surface/text tokens;
+   semantic hue tokens (primary/blue/red/...) stay the same.
+   ======================================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ds-bg: #111827;
+    --ds-fg: #f9fafb;
+    --ds-fg-subtle: #9ca3af;
+    --ds-bg-subtle: #1f2937;
+    --ds-border: #374151;
+  }
 }
