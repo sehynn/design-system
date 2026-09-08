@@ -6,7 +6,7 @@ import Icon, { IconProps } from "../../atoms/Icon";
 export type AlertType = "success" | "info" | "warning" | "error" | "note" | "message";
 export type AlertScreenType = "desktop" | "mobile";
 
-export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface AlertProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
   /** Main field to describe alert information. Any valid React node */
   title: React.ReactNode;
   /** Use this field for describing information more verbose. Any valid React node */

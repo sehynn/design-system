@@ -1,5 +1,5 @@
-@import '../../../styles/abstracts/tokens';
-@import '../../../styles/abstracts/mixins';
+@import "../../../styles/abstracts/tokens";
+@import "../../../styles/abstracts/mixins";
 
 .navigationBar {
   width: 100%;
@@ -86,31 +86,31 @@
 }
 
 // Color variations (for active state)
-.color-purple {
+.color-primary {
   .navItem.active {
     color: #8b5cf6 !important;
   }
 }
 
-.color-blue {
+.color-info {
   .navItem.active {
     color: #3b82f6 !important;
   }
 }
 
-.color-red {
+.color-danger {
   .navItem.active {
     color: #ef4444 !important;
   }
 }
 
-.color-black {
+.color-neutral {
   .navItem.active {
     color: #1f2937 !important;
   }
 }
 
-.color-yellow {
+.color-warning {
   .navItem.active {
     color: #f59e0b !important;
   }

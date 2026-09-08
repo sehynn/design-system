@@ -1,8 +1,8 @@
 // ========================================
 // Atoms - Form
 // ========================================
-export { default as Button } from "./components/atoms/Button";
-export type { ButtonProps, ButtonType } from "./components/atoms/Button";
+export { default as Button, ButtonType } from "./components/atoms/Button";
+export type { ButtonProps } from "./components/atoms/Button";
 
 export { default as Radio } from "./components/atoms/Radio";
 export type { RadioProps, RadioSize, RadioType, RadioLabelPosition, RadioLabelAlignment } from "./components/atoms/Radio";

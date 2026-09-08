@@ -297,6 +297,19 @@ const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(function File
     }
   };
 
+  const handleDownloadFile = (file: IUploadedFile) => {
+    const url = file.preview || URL.createObjectURL(file);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = file.name;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    if (!file.preview) {
+      URL.revokeObjectURL(url);
+    }
+  };
+
   const handleDeleteFile = (fileToDelete: IUploadedFile) => {
     const newUploadedFiles = uploadedFiles.filter(f => f.id !== fileToDelete.id);
     setUploadedFiles(newUploadedFiles);
@@ -382,12 +395,12 @@ const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(function File
 
   return (
     <div
+      {...rest}
       ref={ref}
       className={containerCls}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
-      {...rest}
     >
       <input
         ref={fileInputRef}
@@ -421,7 +434,7 @@ const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(function File
           <Button
             type="button"
             theme={ButtonType.FILL}
-            color="blue"
+            color="info"
             size="md"
             onClick={handleBrowseClick}
             disabled={isDisabled}
@@ -454,7 +467,7 @@ const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(function File
                 preview={isImageUpload ? file.preview : undefined}
                 metadata={getFileMetadata(file) || undefined}
                 onPreview={file.preview ? () => window.open(file.preview, '_blank') : undefined}
-                onDownload={undefined} // TODO: Implement download functionality
+                onDownload={showDownloadButton ? () => handleDownloadFile(file) : undefined}
                 onDelete={() => handleDeleteFile(file)}
                 showPreview={showPreviewButton}
                 showDownload={showDownloadButton}
@@ -496,7 +509,7 @@ const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(function File
           <Button
             type="button"
             theme={ButtonType.FILL}
-            color="blue"
+            color="info"
             size="md"
             onClick={handleStartUpload}
             disabled={isDisabled}
@@ -509,7 +522,7 @@ const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(function File
             <Button
               type="button"
               theme={ButtonType.OUTLINE}
-              color="red"
+              color="danger"
               size="md"
               onClick={handleReset}
               disabled={isDisabled}

@@ -36,11 +36,11 @@ const meta: Meta<typeof Button> = {
     },
     color: {
       control: 'select',
-      options: ['purple', 'blue', 'red', 'black', 'yellow'],
+      options: ['primary', 'info', 'danger', 'neutral', 'warning'],
       description: 'Button color (works with COLOR theme)',
       table: {
         category: 'Appearance',
-        defaultValue: { summary: 'purple' },
+        defaultValue: { summary: 'primary' },
       },
     },
     size: {
@@ -99,7 +99,7 @@ export const Default: Story = {
   args: {
     children: "Button",
     theme: ButtonType.FILL,
-    color: "purple",
+    color: "primary",
     size: "md",
     disabled: false,
     fullWidth: false,
@@ -110,7 +110,7 @@ export const Outline: Story = {
   args: {
     children: "Button",
     theme: ButtonType.OUTLINE,
-    color: "purple",
+    color: "primary",
     size: "md",
     disabled: false,
     fullWidth: false,
@@ -121,7 +121,7 @@ export const Minimal: Story = {
   args: {
     children: "Button",
     theme: ButtonType.GHOST,
-    color: "purple",
+    color: "primary",
     size: "md",
     disabled: false,
     fullWidth: false,

@@ -44,7 +44,7 @@ const meta: Meta<typeof Avatar> = {
     },
     color: {
       control: 'select',
-      options: ['default', 'purple', 'blue', 'red', 'black'],
+      options: ['default', 'primary', 'info', 'danger', 'neutral'],
       description: 'Avatar color',
       table: {
         category: 'Appearance',
@@ -93,7 +93,7 @@ type Story = StoryObj<typeof Avatar>;
 export const Default: Story = {
   args: {
     children: "JD",
-    color: "purple",
+    color: "primary",
     shape: "circle",
     size: "default",
   },
@@ -102,7 +102,7 @@ export const Default: Story = {
 export const Square: Story = {
   args: {
     children: "AB",
-    color: "blue",
+    color: "info",
     shape: "square",
     size: "default",
   },

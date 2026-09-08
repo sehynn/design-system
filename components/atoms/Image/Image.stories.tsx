@@ -121,10 +121,10 @@ export const Default: Story = {
     selectMode: false,
     actions: (
       <div style={{ display: 'flex', gap: '8px' }}>
-        <Button theme={ButtonType.FILL} color="purple" size="sm">
+        <Button theme={ButtonType.FILL} color="primary" size="sm">
           View
         </Button>
-        <Button theme={ButtonType.OUTLINE} color="purple" size="sm">
+        <Button theme={ButtonType.OUTLINE} color="primary" size="sm">
           Edit
         </Button>
       </div>

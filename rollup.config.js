@@ -7,15 +7,16 @@ import postcss from "rollup-plugin-postcss";
 
 export default {
   input: "./index.ts",
+  external: ["classnames"],
   output: [
     {
       dir: "build",
       format: "esm",
       exports: "named",
       sourcemap: true,
+      preserveModules: true,
     },
   ],
-  preserveModules: true,
   plugins: [
     peerDepsExternal(),
     image(),
