@@ -5,7 +5,7 @@ import Icon from "../../atoms/Icon";
 import Button, { ButtonType } from "../../atoms/Button";
 
 export type NavigationPosition = "top" | "bottom";
-export type NavigationColor = "purple" | "blue" | "red" | "black" | "yellow";
+export type NavigationColor = "primary" | "info" | "danger" | "neutral" | "warning";
 
 export interface INavigationItem {
   /** Unique key for the navigation item */
@@ -44,7 +44,7 @@ const NavigationBar = forwardRef<HTMLElement, NavigationBarProps>(function Navig
     items,
     activeKey,
     showLabels = true,
-    activeColor = "purple",
+    activeColor = "primary",
     position = "bottom",
     onNavigate,
     className,

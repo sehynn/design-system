@@ -3,7 +3,7 @@ import cn from "classnames";
 import styles from "./style.module.scss";
 import Icon from "../Icon";
 
-export type AvatarColor = "default" | "purple" | "blue" | "red" | "black";
+export type AvatarColor = "default" | "primary" | "info" | "danger" | "neutral";
 export type AvatarShape = "circle" | "square";
 export type AvatarSize = "small" | "default" | "large";
 

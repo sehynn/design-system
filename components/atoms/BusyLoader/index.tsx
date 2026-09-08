@@ -4,7 +4,7 @@ import styles from "./style.module.scss";
 
 export type SpinnerSize = "small" | "medium" | "big";
 export type LoaderType = "spinner" | "bubbles" | "bar";
-export type LoaderColor = "purple" | "blue" | "red" | "black";
+export type LoaderColor = "primary" | "info" | "danger" | "neutral";
 export type LoaderSpeed = "slow" | "normal" | "fast";
 
 export interface BusyLoaderProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -23,7 +23,7 @@ const BusyLoader = forwardRef<HTMLDivElement, BusyLoaderProps>(function BusyLoad
     isBusy = true,
     spinnerSize = "small",
     type = "spinner",
-    color = "purple",
+    color = "primary",
     speed = "normal",
     children,
     loadingText,

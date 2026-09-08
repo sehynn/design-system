@@ -14,8 +14,8 @@ type Size = "sm" | "md" | "lg";
 type Rounded = "sm" | "md" | "lg" | "pill"; 
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> { 
-  theme?: ButtonType; 
-  color?: "purple" | "blue" | "red" | "black" | "yellow";
+  theme?: ButtonType;
+  color?: "primary" | "info" | "danger" | "neutral" | "warning";
   size?: Size; 
   fullWidth?: boolean; 
   loading?: boolean; 
@@ -27,8 +27,8 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   {
     children,
-    theme = ButtonType.FILL,  
-    color = "purple",
+    theme = ButtonType.FILL,
+    color = "primary",
     size = "md",
     fullWidth,
     loading,

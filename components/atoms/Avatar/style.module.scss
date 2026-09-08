@@ -74,22 +74,22 @@
   color: var(--ds-fg);
 }
 
-.color-purple {
+.color-primary {
   background: linear-gradient(135deg, var(--ds-primary-500), var(--ds-primary-600));
   color: var(--ds-color-white);
 }
 
-.color-blue {
+.color-info {
   background: linear-gradient(135deg, var(--ds-blue-500), var(--ds-blue-600));
   color: var(--ds-color-white);
 }
 
-.color-red {
+.color-danger {
   background: linear-gradient(135deg, var(--ds-red-500), var(--ds-red-600));
   color: var(--ds-color-white);
 }
 
-.color-black {
+.color-neutral {
   background: linear-gradient(135deg, var(--ds-black-500), var(--ds-black-600));
   color: var(--ds-color-white);
 }

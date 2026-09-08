@@ -10,7 +10,7 @@ const meta: Meta<typeof NavigationBar> = {
     showLabels: { control: 'boolean' },
     activeColor: {
       control: 'select',
-      options: ['purple', 'blue', 'red', 'black', 'yellow'],
+      options: ['primary', 'info', 'danger', 'neutral', 'warning'],
     },
     position: {
       control: 'select',
@@ -84,7 +84,7 @@ export const Default: Story = {
   render: (args) => <DefaultNavigationBarWrapper {...args} />,
   args: {
     showLabels: true,
-    activeColor: 'purple',
+    activeColor: 'primary',
     position: 'bottom',
   },
 };
