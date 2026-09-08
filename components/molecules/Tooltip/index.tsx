@@ -115,12 +115,12 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(function Tooltip(
 
   return (
     <div
+      {...rest}
       ref={ref}
       className={containerCls}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
-      {...rest}
     >
       <div className={styles.tooltipTrigger}>{children}</div>
       <div

@@ -395,12 +395,12 @@ const FileUploader = forwardRef<HTMLDivElement, FileUploaderProps>(function File
 
   return (
     <div
+      {...rest}
       ref={ref}
       className={containerCls}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
-      {...rest}
     >
       <input
         ref={fileInputRef}

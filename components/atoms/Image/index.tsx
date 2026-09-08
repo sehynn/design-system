@@ -11,8 +11,8 @@ export interface ImageProps extends React.HTMLAttributes<HTMLDivElement> {
   emptyText?: string;
   /** Will add a title to the top of Image atom. Any valid React node */
   title?: string;
-  /** Title for 'Tooltip'. Possible values: string | ReactNode */
-  tooltipTitle?: string | React.ReactNode;
+  /** Native title tooltip shown on hover. Renders as the DOM "title" attribute, so it must be plain text. */
+  tooltipTitle?: string;
   /** Will add a border when set to "true" */
   withBorder?: boolean;
   /** The property will add a checkbox and an overlay over the image */
@@ -70,7 +70,7 @@ const Image = forwardRef<HTMLDivElement, ImageProps>(function Image(
   const showEmpty = !src || imageError;
 
   return (
-    <div ref={ref} className={containerCls} title={tooltipTitle as string} {...rest}>
+    <div {...rest} ref={ref} className={containerCls} title={tooltipTitle}>
       {title && <div className={styles.title}>{title}</div>}
       
       <div className={styles.imageWrapper}>
@@ -82,21 +82,24 @@ const Image = forwardRef<HTMLDivElement, ImageProps>(function Image(
         ) : (
           <>
             <img
+              {...imageProps}
               src={src}
               alt={imageProps?.alt || ""}
-              className={styles.image}
-              onError={handleImageError}
-              {...imageProps}
+              className={cn(styles.image, imageProps?.className)}
+              onError={(e) => {
+                handleImageError();
+                imageProps?.onError?.(e);
+              }}
             />
             
             {selectMode && (
               <div className={styles.selectOverlay}>
                 <input
+                  {...checkboxProps}
                   type="checkbox"
                   checked={isSelected}
                   onChange={handleCheckboxChange}
-                  className={styles.checkbox}
-                  {...checkboxProps}
+                  className={cn(styles.checkbox, checkboxProps?.className)}
                 />
               </div>
             )}
