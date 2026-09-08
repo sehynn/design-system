@@ -7,6 +7,7 @@ import postcss from "rollup-plugin-postcss";
 
 export default {
   input: "./index.ts",
+  external: ["classnames"],
   output: [
     {
       dir: "build",
