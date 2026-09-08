@@ -13,9 +13,9 @@ export default {
       format: "esm",
       exports: "named",
       sourcemap: true,
+      preserveModules: true,
     },
   ],
-  preserveModules: true,
   plugins: [
     peerDepsExternal(),
     image(),
